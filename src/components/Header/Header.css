@@ -1,0 +1,36 @@
+.Header{
+    background-color: white;
+    display: flex;
+    margin:0px;
+}
+.BookShelf{
+    background-color: rgb(148,71,69);
+    display:flex;
+    flex-direction: column;
+    color: white;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size:18px;
+    border-bottom-right-radius: 8px;
+    margin-bottom:0;
+    padding-right:12px;
+    padding-left:10px;
+}
+.bigBook{
+    font-size: 25px;
+}
+.Line{
+    color:rgb(190,147,146);
+    /* color:white; */
+    padding-top:0px;
+    margin-top:0;
+}
+.Text{
+    padding-bottom: 0px;
+}
+hr{
+    color:rgb(190,147,146);
+    padding-top:0px;
+    margin-top:0;
+}

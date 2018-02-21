@@ -1,0 +1,29 @@
+.OopsBox{
+    background-color: rgb(232,131,78);
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding:50px;
+    /* padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom:50px; */
+    border-radius: 5px;
+}
+.OopsText{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: Helvetica;
+    font-weight:bolder;
+    font-size: 25px;
+    transform: scale(.7, 1);
+}
+.Oops{
+    padding-top:10px;
+    padding-bottom:10px;
+}

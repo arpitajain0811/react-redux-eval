@@ -14,11 +14,7 @@ class App extends React.Component {
   componentDidMount() {
     fetch('/books/local').then(response => response.json())
       .then((responseArray) => {
-        // const responseString = JSON.stringify(responseBody);
-        // console.log('$$$', responseArray);
-        // this.props.getNotes(responseArray);
         if (responseArray.length !== 0) {
-          // console.log('$$$', responseString);
           this.setState({
             dbEmpty: false,
           });

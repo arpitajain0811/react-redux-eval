@@ -3,10 +3,16 @@ const defaultStore = {
   likes: [],
 };
 
-export default (prevState = defaultStore, action) => {
+export default (state = defaultStore, action) => {
   switch (action.type) {
+    case 'getBooks': {
+      return {
+        ...state,
+        books: action.payload,
+      };
+    }
     default: {
-      return prevState;
+      return state;
     }
   }
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './OopsBox.css';
+import getBooksFromDb from '../../redux/actions';
 
 class OopsBox extends React.Component {
   // constructor(props) {
@@ -17,16 +18,16 @@ class OopsBox extends React.Component {
       response.json()
         .then((responseObj) => {
           if (responseObj.message === 'Books added to database') {
-            console.log(responseObj.message);
+            // console.log(responseObj.message);
             fetch('/books/local').then(res => res.json())
               .then((responseBody) => {
-                console.log('##', responseBody);
+                this.props.getBooksToStore(responseBody);
+                // console.log('##', responseBody);
               });
           }
         });
     });
   }
-  // const OopsBox = () => (
   render() {
     return (
       <div className="BoxWrapper">
@@ -41,13 +42,13 @@ class OopsBox extends React.Component {
     );
   }
 }
-// const mapDispatchToProps = dispatch => ({
-//   getBooks: () => {
-//     dispatch(getBooksFromDb());
-//   },
-// });
-// export default connect(null, mapDispatchToProps)(OopsBox);
-export default OopsBox;
-// OopsBox.propTypes = {
-//   getBooks: PropTypes.func.isRequired,
-// };
+const mapDispatchToProps = dispatch => ({
+  getBooksToStore: (response) => {
+    dispatch(getBooksFromDb(response));
+  },
+});
+export default connect(null, mapDispatchToProps)(OopsBox);
+// export default OopsBox;
+OopsBox.propTypes = {
+  getBooksToStore: PropTypes.func.isRequired,
+};

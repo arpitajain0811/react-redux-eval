@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './OopsBox.css';
-import getBooksFromDb from '../../redux/actions';
+import { getBooksFromDb } from '../../redux/actions';
 
 class OopsBox extends React.Component {
   // constructor(props) {

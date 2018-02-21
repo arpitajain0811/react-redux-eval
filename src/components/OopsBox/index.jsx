@@ -4,12 +4,14 @@ import './OopsBox.css';
 
 
 const OopsBox = () => (
-  <div className="OopsBox">
-    <div className="OopsText">
-      <div className="Oops">Oops ! No books found!</div>
-      <div className="Oops">Import them now ?</div>
+  <div className="BoxWrapper">
+    <div className="OopsBox">
+      <div className="OopsText">
+        <div className="Oops">Oops ! No books found!</div>
+        <div className="Oops">Import them now ?</div>
+      </div>
+      <div className="RefreshIcon" />
     </div>
-    <div className="RefreshIcon" />
   </div>
 );
 

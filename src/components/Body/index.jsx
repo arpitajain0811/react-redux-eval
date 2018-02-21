@@ -8,7 +8,7 @@ import BooksBody from '../BooksBody';
 const Body = () => (
   <div className="Body">
     {/* <OopsBox /> */}
-    {/* <BooksBody /> */}
+    <BooksBody />
   </div>
 );
 

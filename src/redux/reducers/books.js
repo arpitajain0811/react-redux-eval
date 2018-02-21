@@ -1,5 +1,6 @@
 const defaultStore = {
-
+  books: [],
+  likes: [],
 };
 
 export default (prevState = defaultStore, action) => {

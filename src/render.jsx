@@ -4,5 +4,5 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import store from './redux/store';
 
-const Render = () => { ReactDOM.render(<App />, document.getElementById('root')); };
+const Render = () => { ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root')); };
 export default Render;

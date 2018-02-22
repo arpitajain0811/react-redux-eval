@@ -2,6 +2,7 @@
     background-color: white;
     display: flex;
     margin:0px;
+    margin-bottom:30px;
 }
 .BookShelf{
     background-color: rgb(148,71,69);
@@ -11,14 +12,15 @@
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    font-size:18px;
+    font-size:25px;
     border-bottom-right-radius: 8px;
     margin-bottom:0;
-    padding-right:12px;
-    padding-left:10px;
+    padding-right:28px;
+    padding-left:15px;
+    padding-top: 10px;
 }
 .bigBook{
-    font-size: 25px;
+    font-size: 38px;
 }
 .Line{
     color:rgb(190,147,146);
@@ -30,7 +32,12 @@
     padding-bottom: 0px;
 }
 hr{
-    color:rgb(190,147,146);
+    /* color:rgb(190,147,146); */
+    color:white;
     padding-top:0px;
     margin-top:0;
+    height: 5px;
+    border: 0;
+    border-radius: 5px;
+	box-shadow: 0px 10px 10px -10px white inset;
 }

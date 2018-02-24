@@ -30,3 +30,6 @@
     height:50px;
     width:50px;
 }
+.SideButton:focus {
+    outline: none;
+  }

@@ -1,16 +1,13 @@
 .OopsBox{
     background-color: rgb(245, 119, 51);
     width:50%;
-    height:40%;
+    height:65%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
-    padding:50px;
-    /* padding-right: 50px;
-    padding-top: 50px;*/
-    padding-bottom:60px; 
+    padding:5%;
     border-radius: 5px; 
 }
 .OopsText{
@@ -18,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 5%;
     font-family: Helvetica;
     font-weight:bolder;
     font-size: 25px;
@@ -28,8 +25,8 @@
 }
 .Oops{
     width:100%;
-    padding-top:15px;
-    padding-bottom:20px;
+    padding-top:4%;
+    padding-bottom:6%;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -42,10 +39,11 @@
     align-items: center;
 }
 .RefreshButton{
-    height:80px;
+    height:70px;
     width:85px;
     background-color: rgb(245, 119, 51);
     border:none;
+    /* margin-bottom:5%; */
 }
 .RefreshIcon{
     height: 100%;

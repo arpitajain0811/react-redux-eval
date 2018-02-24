@@ -26,6 +26,7 @@ img{
 }
 .BookName{
     font-weight: bold;
+    height:40px;
     font-family: Helvetica, sans-serif;
 }
 .BookRating{
@@ -40,4 +41,36 @@ img{
     /* font-size:15px; */
     font-weight: bold;
     font-family: Helvetica, sans-serif;
+}
+.LikeIcon{
+    border-radius:50px;
+    height:30px;
+    width:30px;
+    padding:5px;
+}
+.Like{
+    border-radius:50px;
+    bottom:177px;
+    left:215px;
+    height:50px;
+    width:50px;
+    position: relative;
+    background-color: grey;
+}
+.LikeButton{
+    border-radius:50px;
+    padding:0;
+    margin:5px;
+    background-color: grey;
+    border:0;
+}
+.LikeButton:focus {
+    outline: none;
+  }
+.RedLikeButton{
+    border-radius:50px;
+    padding:0;
+    margin:5px;
+    background-color: red;
+    border:0;
 }

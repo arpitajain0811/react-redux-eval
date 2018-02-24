@@ -16,4 +16,5 @@ export default BooksByAuthor;
 BooksByAuthor.propTypes = {
   author: PropTypes.string.isRequired,
   books: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  // likes: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };

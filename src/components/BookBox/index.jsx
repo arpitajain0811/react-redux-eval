@@ -1,16 +1,16 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './BookBox.css';
 
 
-const BookBox = () => (
+const BookBox = props => (
   <div className="BookBox">
     <div className="Book">
       <div className="Picture" ><img src="harrypotter.jpeg" alt="bookimage" /></div>
       <div className="BookDetails">
-        <div className="BookName">Harry Potter and the secret chamber</div>
-        <div className="BookRating">0.00</div>
-        <div className="BookAuthor">jk rowling</div>
+        <div className="BookName">{props.book.name}</div>
+        <div className="BookRating">{props.book.rating}</div>
+        <div className="BookAuthor">{props.book.author}</div>
       </div>
     </div>
     {/* <div className="LikeIcon">icon</div> */}
@@ -18,3 +18,6 @@ const BookBox = () => (
 );
 
 export default BookBox;
+BookBox.propTypes = {
+  book: PropTypes.objectOf.isRequired,
+};

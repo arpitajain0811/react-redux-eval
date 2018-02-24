@@ -5,26 +5,29 @@ import './BooksBody.css';
 
 
 const BooksBody = (props) => {
-  // console.log(props.books);
+  // console.log('props', props.books);
+  const authors = Object.keys(props.books);
+  // console.log('author:', authors);
   const bookHolder = [];
-  for (let i = 0; i < props.books.length; i += 1) {
+  for (let i = 0; i < authors.length; i += 1) {
+    const currAuthor = authors[i];
+    // console.log(props.books[currAuthor]);
     bookHolder.push((<BooksByAuthor
-      books={props.books[i]}
-      // id={props.notesArray[i].noteId}
-      // title={props.notesArray[i].noteTitle}
-      // content={props.notesArray[i].noteBody}
+      author={authors[i]}
+      books={props.books[currAuthor]}
     />
     ));
   }
   return (
     <div className="BooksBody">
-      {/* {bookHolder} */}
-      <BooksByAuthor />
-      <BooksByAuthor />
+      {bookHolder}
+      {/* <BooksByAuthor />
+      <BooksByAuthor /> */}
     </div>
   );
 };
 BooksBody.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  // books: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  books: PropTypes.objectOf.isRequired,
 };
 export default BooksBody;

@@ -25,9 +25,9 @@ getBooks=() => {
         if (responseObj.message === 'Books added to database') {
           fetch('/books/local').then(res => res.json())
             .then((responseBody) => {
-              console.log(responseBody);
+              // console.log('response', responseBody.booksByAuthor);
               this.setState({
-                booksArray: responseBody,
+                booksArray: responseBody.booksByAuthor,
                 dbEmpty: false,
               });
               // this.props.getBooksToStore(responseBody);
@@ -39,7 +39,7 @@ getBooks=() => {
 checkDb=() => {
   fetch('/books/local').then(response => response.json())
     .then((responseArray) => {
-      console.log(responseArray);
+      // console.log(responseArray);
       if (responseArray.message === 'not empty' && this.state.dbEmpty !== false) {
         this.setState({
           dbEmpty: false,
@@ -57,6 +57,7 @@ render() {
       </div>
     );
   }
+  if (this.state.booksArray.length === 0) { this.getBooks(); }
   return (
     <div className="Body">
       <BooksBody books={this.state.booksArray} />

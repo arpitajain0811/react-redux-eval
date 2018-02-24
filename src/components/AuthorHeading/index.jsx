@@ -1,12 +1,14 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './AuthorHeading.css';
 
 
-const AuthorHeading = () => (
+const AuthorHeading = props => (
   <div className="AuthorHeading">
-    J.K Rowling
+    {props.name}
   </div>
 );
-
+AuthorHeading.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 export default AuthorHeading;

@@ -57,6 +57,15 @@ img{
     position: relative;
     background-color: grey;
 }
+.RedLike{
+    border-radius:50px;
+    bottom:177px;
+    left:215px;
+    height:50px;
+    width:50px;
+    position: relative;
+    background-color: red;
+}
 .LikeButton{
     border-radius:50px;
     padding:0;
@@ -73,4 +82,7 @@ img{
     margin:5px;
     background-color: red;
     border:0;
+}
+.RedLikeButton:focus{
+    outline:none;
 }

@@ -12,40 +12,53 @@ class AuthorBooks extends React.Component {
     };
   }
   componentDidMount() {
-    console.log('component did mount');
     this.getLikes();
   }
   getLikes = () => {
     fetch('/likes').then(response =>
       response.json()).then((resJson) => {
-      console.log(resJson);
+      // console.log(resJson);
       this.setState({
         likesArray: resJson,
       });
     });
   }
   putLike=(id) => {
-    console.log('put like', id);
+    for (let i = 0; i < this.state.likesArray.length; i += 1) {
+      if (this.state.likesArray[i].bookId === id && this.state.likesArray[i].liked === 1) {
+        fetch(`/unlike/${id}`, {
+          headers: {
+            'content-type': 'application/json',
+          },
+          method: 'PUT',
+        }).then((response) => {
+          console.log('unlike', response);
+          this.getLikes();
+        });
+        return;
+      }
+    }
     fetch(`/like/${id}`, {
       headers: {
         'content-type': 'application/json',
       },
       method: 'PUT',
-    }).then(() => {
+    }).then((response) => {
+      console.log('like', response);
       this.getLikes();
     });
   }
   render() {
     const booksHolder = [];
-    let isLiked = 0;
+
     for (let i = 0; i < this.props.booksArray.length; i += 1) {
+      let isLiked = 0;
       for (let j = 0; j < this.state.likesArray.length; j += 1) {
         if (this.state.likesArray[j].bookId === this.props.booksArray[i].bookId) {
           isLiked = this.state.likesArray[j].liked;
-        } else { isLiked = 0; }
+        }
       }
       booksHolder.push(<BookBox book={this.props.booksArray[i]} liked={isLiked} onLike={(id) => { this.putLike(id); }} />);
-      console.log('liked?:', isLiked);
     }
     return (
       <div className="AuthorBooks">

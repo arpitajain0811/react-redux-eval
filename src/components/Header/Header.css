@@ -1,6 +1,8 @@
 .Header{
     background-color: white;
-    display: flex;
+    width:250px;
+    /* display: block; */
+    /* flex-grow:1; */
     margin:0px;
     margin-bottom:30px;
 }

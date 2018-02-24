@@ -3,7 +3,9 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    height:100;
+    height:100vh;
+    position:fixed;
+    /* flex-grow: 1; */
     width: 90px;
     align-items: center;
 }
@@ -13,4 +15,18 @@
     font-weight: bold;
     font-size: 40px;
     padding-top:10px;
+}
+.icons{
+    display:flex;
+    flex-direction: column;
+}
+.SideButton{
+    background-color: rgb(49,58,71);
+    border:0;
+    height:80px;
+    width:80px;
+}
+.SideIcon{
+    height:50px;
+    width:50px;
 }

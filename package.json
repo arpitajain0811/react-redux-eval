@@ -28,7 +28,7 @@
   },
   "author": "",
   "license": "ISC",
-  "proxy": "http://localhost:5002/",
+  "proxy": "http://localhost:4005/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arpitajain0811/react-redux-eval.git"

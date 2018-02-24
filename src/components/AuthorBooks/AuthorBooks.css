@@ -1,7 +1,7 @@
 .AuthorBooks{
     display: flex;
-    background-color: rgb(232,131,78);
-    padding-left:30px;
-    padding-right:30px;
+    background-color: rgb(249,136,58);
+    padding-left:45px;
+    padding-right:45px;
     flex-flow: wrap;
 }

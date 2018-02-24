@@ -2,21 +2,21 @@
     display: flex;
     flex-direction: column;
     border-radius:12px;
-    margin: 40px;
+    margin: 50px;
     background-color: white;
-    height:300px;
-    width:280px;
+    height:320px;
+    width:270px;
     border:0;
     box-shadow: 0 0 28px rgb(121, 88, 74);
 }
 .Picture{
-    height:150px;
-    width:280px;
+    height:160px;
+    width:270px;
     border-bottom: 1px solid black;
 }
 img{
-    height:150px;
-    width:280px;
+    height:160px;
+    width:270px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -51,7 +51,7 @@ img{
 .Like{
     border-radius:50px;
     bottom:177px;
-    left:215px;
+    left:200px;
     height:50px;
     width:50px;
     position: relative;
@@ -60,7 +60,7 @@ img{
 .RedLike{
     border-radius:50px;
     bottom:177px;
-    left:215px;
+    left:200px;
     height:50px;
     width:50px;
     position: relative;

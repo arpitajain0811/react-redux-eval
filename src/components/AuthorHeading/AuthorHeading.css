@@ -3,6 +3,7 @@
     padding: 15px;
     font-family: Helvetica, sans-serif;
     padding-left:70px;
+    padding-top: 30px; 
     font-size: 30px;
     flex-grow:1;
     display:flex;
